@@ -48,7 +48,7 @@ now you should be able to see plant models in gazebo models lists according to i
 
 To launch the `agribot_gazebo` simply run: 
 ```
-$ roslaunch agribot_gazebo agribot_sb_farm.launch
+$ roslaunch agribot_gazebo agribot_farm.launch
 ```
 
 **`NOTE`** to find more information about gazebo environment and how to define robots in this simulator please visit [Gazebo website](http://gazebosim.org/tutorials/?tut=ros_urdf) 
@@ -80,7 +80,7 @@ the launch file is taking the configuration of an empty world which is a default
   </include>
 
   <!-- Spawn a robot into Gazebo -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find agribot_control)/urdf/agribot.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro '$(find agribot_control)/urdf/agribot.xacro'"/>
 
   <node name="agribot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" respawn="false"
    args="-x 6 -y -1 -z 1.13 -Y 1.57079 -urdf -param robot_description -model agribot" />

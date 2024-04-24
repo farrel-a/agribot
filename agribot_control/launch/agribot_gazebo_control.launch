@@ -2,13 +2,13 @@
 <launch>
 
   <!-- Load the URDF into the ROS Parameter Server -->
-  <!-- <param name="robot_description" command="$(find xacro)/xacro.py '$(find agribot_control)/urdf/agribot.xacro'"/> -->
+  <!-- <param name="robot_description" command="$(find xacro)/xacro '$(find agribot_control)/urdf/agribot.xacro'"/> -->
 
   <!-- Show in Rviz   -->
   <!-- <node name="rviz" pkg="rviz" type="rviz"/> -->
 
   <!-- Include gazebo launch file rrbot_world.launch -->
-  <include file="$(find agribot_gazebo)/launch/agribot_sb_farm.launch">
+  <include file="$(find agribot_gazebo)/launch/agribot_farm.launch">
     <arg name="gui" default="true"/>
   </include>
   <!-- <include file="$(find agribot_gazebo)/launch/husky_sb_farm.launch" /> -->
